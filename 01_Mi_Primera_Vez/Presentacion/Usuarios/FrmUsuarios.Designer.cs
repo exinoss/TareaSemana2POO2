@@ -42,11 +42,13 @@
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblFrmPersonal = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.chkActivo);
             this.panel1.Controls.Add(this.cmbPaises);
             this.panel1.Controls.Add(this.label4);
@@ -70,7 +72,7 @@
             // 
             this.chkActivo.AutoSize = true;
             this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.chkActivo.Location = new System.Drawing.Point(22, 349);
+            this.chkActivo.Location = new System.Drawing.Point(213, 328);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(71, 24);
             this.chkActivo.TabIndex = 15;
@@ -112,6 +114,12 @@
             // 
             this.cmbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbCiudad.FormattingEnabled = true;
+            this.cmbCiudad.Items.AddRange(new object[] {
+            "Ecuador",
+            "Venezuela",
+            "Cuba",
+            "Chile",
+            "Peru"});
             this.cmbCiudad.Location = new System.Drawing.Point(186, 275);
             this.cmbCiudad.Name = "cmbCiudad";
             this.cmbCiudad.Size = new System.Drawing.Size(256, 28);
@@ -175,12 +183,13 @@
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(214, 389);
+            this.btnGuardar.Location = new System.Drawing.Point(81, 379);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(183, 54);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar información";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblFrmPersonal
             // 
@@ -193,6 +202,18 @@
             this.lblFrmPersonal.TabIndex = 2;
             this.lblFrmPersonal.Text = "Gestión de usuarios";
             this.lblFrmPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(293, 379);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(183, 54);
+            this.btnEditar.TabIndex = 16;
+            this.btnEditar.Text = "Editar información";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // FrmUsuarios
             // 
@@ -228,5 +249,6 @@
         private System.Windows.Forms.ComboBox cmbPaises;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chkActivo;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

@@ -52,6 +52,7 @@
             this.dgvDatos.RowTemplate.Height = 24;
             this.dgvDatos.Size = new System.Drawing.Size(781, 294);
             this.dgvDatos.TabIndex = 1;
+            this.dgvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellClick);
             this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             // 
             // panel1
@@ -125,6 +126,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CUUsuarios";
             this.Size = new System.Drawing.Size(781, 402);
+            this.Load += new System.EventHandler(this.CUUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

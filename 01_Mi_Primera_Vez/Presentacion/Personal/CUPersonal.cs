@@ -26,7 +26,6 @@ namespace _01_Mi_Primera_Vez.Presentacion
 
         private void CUPersonal_Load(object sender, EventArgs e)
         {
-            //llamar cls_personal cargar el procedmiento donde se muestren todos los registros de la BDD
             this.cargaGrilla();
         }
 
